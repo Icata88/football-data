@@ -1,0 +1,126 @@
+// mixins
+%clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.clearfix {
+	@extend %clearfix;
+}
+
+// colors
+/* names taken from http://www.color-blindness.com/color-name-hue/ */
+$maroon: #6E0000;
+$light-olive: #9B9B00;
+$olive: #6E6200;
+$cobalt: #0052AA;
+$very-light-grey: #CFCFCF;
+$persian-indigo: #3F1052;
+$prussian-blue: #003472;
+$nepal: #90A5B6;
+$brown: #B12829;
+$salem: #1D9647;
+$fire-bush: #DFA042;
+$gamboge: #D88913;
+$dark-grey: #AAAAAA;
+$bondi-blue: #008BBF;
+$ronchi: #E5B75B;
+$storm-grey: #79797A;
+$tangerine-yellow: #ffcc66;
+$karry: #FED3C0;
+$snow-flurry: #DDF9C0;
+$aluminium: #818285;
+$athens-grey: #d6d9da;
+$black: #000;
+$bright-grey: #58585A;
+$blue-lagoon: #005168;
+$cerulean: #00629b;
+$charcoal: #424242;
+$charm: #CC7F7F;
+$chateau-green: #3f9e42;
+$cherub: #F7E2EF;
+$citrus: #84bd00;
+$crimson: #d11241;
+$dark-gray: #b3b2b2;
+$deep-sky-blue: #00aeef;
+$deep-sky-blue-gradient: #3dcaff;
+$dark-blue: #4294b2;
+$dim-gray: #666;
+$light-gray: #eeeeee;
+$gainsboro: #dadada;
+$golden-yellow: #ffec00;
+$grey-chateau: #95979a;
+$iron: #d1d2d4;
+$islamic-green: #019328;
+$jumbo: #878786;
+$light-cyan: #D9F3FD;
+$mid-grey: #6a6c6f;
+$mischka:#a8a9ad;
+$mortar: #575656;
+$night-rider: #333;
+$nobel: #999;
+$orange-peel: #f7a100;
+$pacific-blue: #009ee2;
+$paynes-grey: #404041;
+$pelorous: #2386B0;
+$persian-red: #d54134;
+$rain-forest: #64772d;
+$sangria: #990000;
+$solitude: #F6F6F8;
+$solitude-light: #F1F3F4;
+$stark-white: #cebdb3;
+$summer-sky: #18a6e4;
+$teal: #008578;
+$tutu: #faeded;
+$venetian-red: #cc0136;
+$very-light-gray: #ccc;
+$white: #fff;
+$white-lilac: #f3f3f4;
+$white-smoke: #efefef;
+$bright-blue: #e2eff7;
+$light-smoke: #f8f8f9;
+$zeus: #3c3c3b;
+$zircon: #dce0e1;
+$zircon-light: #E8E9EB;
+$light-gray-border: #dfdcdc;
+$light-grey-background: #898a8b;
+$light-blue-bg: #ddf0f8;
+$light-blue-bg-a90:rgba(221,240,248,.9);
+$silver: #a7a9ac;
+$bg-circle: #ede9e8;
+$border-circle: #dcdadb;
+$blue-water: #dff0f7;
+$gray-sand: #f6f6f6;
+$school-yellow: #ffdf00;
+$facebook-blue: #4867aa;
+$monza: #CE0538;
+$suva-grey: #8d8885;
+$dark-grey: #95979A;
+
+$athens-grey: #d6d9da;
+$lavender: #DDF0F8;
+$black-russian: #08080b;
+$alizarin: #DA1E3F;
+$razzmatazz: #da0540;
+$earl-grey: $athens-grey;
+$light-blue: $lavender;
+$bold-strike: $black-russian;
+$button-red: $alizarin;
+$button-red-hover: $venetian-red;
+$soft-red: $razzmatazz;
+
+$swatch-types: black #000000, beige #f5f5dc, blue blue, purple purple, red red, brown #783201, green green, grey #8f979d, pink #fe249a, orange orange, white #ffffff, yellow #ffff00, navy navy, copper #b49f70, silver #a7a9ac, bronze #ae7020, clear #ededfb,coral #ed675b, teal #3a817f, nickel #b7b6b1, natural #ffffe0, yellow #fdd700, cream #ece5c8, gold #b49f70;
+
+$selectorStepColors: #B8B8B8, #AFAFAF, #95979A, #898A8B, #6D6D6D, #5E5E5E, #4A4A4A, #404040, #363636;
+$comfortColors: #E9F1F8, #FCE0F6, #EAF8E9, #FFD5C6;
+
+// flag-icon-css
+$flag-icon-css-path: '../lib/flag-icon-css/flags';
+
+
+// jquery ui slider
+$sliderHeight: 9px;
+$sliderHandleDiameter: 30px;
