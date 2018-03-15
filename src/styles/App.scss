@@ -71,6 +71,39 @@
 	border-bottom: 1px solid $black;
 }
 
+.legend {
+	background-color: $dark-grey;
+	.text {
+		color: $black-russian;
+	}
+	>.row {
+		padding: 5px 10px;
+	}
+	.indicator {
+		max-width: 80px;
+		height: 40px;
+		&--cl {
+			background-color: $prussian-blue;		
+		}
+		&--cl-po {
+			background-color: $cobalt;			
+		}
+		&--el {
+			background-color: $olive;	
+		}	
+		&--el-po {
+			background-color: $light-olive;
+		}
+		&--rel {
+			background-color: $maroon;	
+		}
+		&--rel-po {
+			background-color: $sangria;
+		}	
+	}
+
+}
+
 .competition {
 	position: relative;
 	max-width: 20%;
@@ -122,6 +155,7 @@
 		}
 
 		color: $white;
+		cursor: default;
 		&:after {
 			content: "";		
 			position: absolute;

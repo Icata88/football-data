@@ -5,6 +5,7 @@ import LeagueTableRow from './LeagueTableRow';
 import LoadingSpinner from './LoadingSpinner';
 import HomeForm from './HomeForm';
 import AwayForm from './AwayForm';
+import Legend from './Legend';
 
 class LeagueTable extends Component {
 	constructor(props) {
@@ -185,8 +186,15 @@ class LeagueTable extends Component {
 										key={index}	
 										status={this.getTeamStatus(team.position)}									
 										team={team} />)
-								}
-							</ul>		
+								}								
+							</ul>
+						)						
+					
+					}
+
+					{
+						this.props.leagueTable && this.state.isTotalClicked && (
+							<Legend leagueCode={this.props.leagueCode} />
 						)
 					}
 
