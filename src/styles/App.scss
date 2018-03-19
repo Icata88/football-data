@@ -82,6 +82,7 @@
 	.indicator {
 		max-width: 80px;
 		height: 40px;
+		border: 1px solid $very-light-grey;
 		&--cl {
 			background-color: $prussian-blue;		
 		}
@@ -104,6 +105,7 @@
 
 }
 
+
 .competition {
 	position: relative;
 	max-width: 20%;
@@ -111,6 +113,7 @@
 	background-color: $white-lilac;
 	padding: 10px;
 	border-right: 6px solid $white;
+	text-decoration: none;
 	&:last-child {
 		border: none;
 	}

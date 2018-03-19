@@ -43,24 +43,36 @@ class LeagueTable extends Component {
 		}
 	}
 
-	componentWillReceiveProps(nextProps) {
-		if (this.props.selectedLeagueID !== nextProps.selectedLeagueID) {
+	smoothScroll(h) {
+		console.log('test');
+		let index = h || 0;
+		if (index < 450) {
+			setTimeout(() => {
+				window.scrollTo(0, index);
+				this.smoothScroll(index + 10);
+			}, 10);
+		}
+	}
+
+	componentDidUpdate(prevProps, prevState) {
+
+		if (prevProps.selectedLeagueID !== this.props.selectedLeagueID) {
+			this.props.showLeagueTable(this.props.selectedLeagueID);			
 			this.setState({
 				isTotalClicked: true,
 				isHomeClicked: false,
 				isAwayClicked: false				
-			});
+			});												
 		}
-	}
-
-	componentDidUpdate(prevProps, prevState) {	
-		if (prevProps.selectedLeagueID !== this.props.selectedLeagueID) {
-			this.props.showLeagueTable(this.props.selectedLeagueID);
-		}		
+		
+		if (this.props.loading !== prevProps.loading && !this.props.loading && prevProps.loading) {
+			this.smoothScroll();
+		}
+	
 	}
 
 	componentDidMount() {
-		this.props.showLeagueTable(this.props.selectedLeagueID);
+		this.props.showLeagueTable(this.props.selectedLeagueID);		
 	}
 
 	getHomeForm() {
@@ -152,7 +164,7 @@ class LeagueTable extends Component {
 		let isHomeClicked = this.state.isHomeClicked ? 'active' : '';
 		let isAwayClicked = this.state.isAwayClicked ? 'active' : '';
 
-		if (this.props.loading) {
+		if (this.props.loading) {		
 			return 	<LoadingSpinner />
 		}
 
